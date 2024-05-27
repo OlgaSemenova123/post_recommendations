@@ -12,14 +12,17 @@ Pet-project по рекомендации топ-N постов является
 Описание данных в таблицах:
 Таблица user_data
 Cодержит информацию о всех пользователях соц.сети
+
 ![image](https://github.com/OlgaSemenova123/post_recommendations/assets/157280225/6fd97559-df14-4838-af5e-3ea51a7fe8b7)
 
 Таблица post_text_df
 Содержит информацию о постах и уникальный ID каждой единицы с соответствующим ей текстом и топиком
+
 ![image](https://github.com/OlgaSemenova123/post_recommendations/assets/157280225/96914c93-ad2f-46af-b093-de5daaed7878)
 
 Таблица feed_data
-Содержит историю о просмотренных постах для каждого юзера в изучаемый период.
+Содержит историю о просмотренных постах для каждого юзера в изучаемый период
+
 ![image](https://github.com/OlgaSemenova123/post_recommendations/assets/157280225/cf1e0973-7611-448d-99af-dad8d376b083)
 
 Оценка модели идет по HitRate@5.
