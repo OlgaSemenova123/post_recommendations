@@ -5,9 +5,9 @@ from sklearn.decomposition import PCA
 
 connection = psycopg2.connect(
     database="startml",
-    user="robot-startml-ro",
-    password="pheiph0hahj1Vaif",
-    host="postgres.lab.karpov.courses",
+    user="robot-start****",
+    password="******",
+    host="postgres.lab.karpov*****",
     port=6432
 )
 
