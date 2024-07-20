@@ -6,8 +6,8 @@ from sqlalchemy import create_engine
 def batch_load_sql(query: str) -> pd.DataFrame:
     CHUNKSIZE = 200000
     engine = create_engine(
-        "postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+        "postgresql://robot-start******"
+        "postgres.lab.karpov**********"
     )
     conn = engine.connect().execution_options(stream_results=True)
     chunks = []
@@ -63,14 +63,14 @@ from catboost import CatBoostClassifier
 
 # Создание соединения с базой данных
 engine = create_engine(
-    "postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-    "postgres.lab.karpov.courses:6432/startml"
+    "postgresql://robot-start*******"
+    "postgres.lab.karpov*******"
 )
 
 # Сохранение признаков в таблицу
 def save_features(features: pd.DataFrame):
     features.to_sql(
-        name='olg_semenova_lesson_22',
+        name='******lesson_22',
         con=engine,
         if_exists='replace',
         index=False
@@ -78,7 +78,7 @@ def save_features(features: pd.DataFrame):
 
 # Загрузка признаков из таблицы
 def load_features() -> pd.DataFrame:
-    query = "SELECT * FROM olg_semenova_lesson_22"
+    query = "SELECT * FROM *******lesson_22"
     return batch_load_sql(query)
 
 
