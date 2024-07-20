@@ -43,8 +43,8 @@ def load_models():
 def batch_load_sql(query: str) -> pd.DataFrame:
     CHUNKSIZE = 50000
     engine = create_engine(
-        "postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+        "postgresql://robot-start*****"
+        "postgres.lab.karpov*****"
     )
     conn = engine.connect().execution_options(stream_results=True)
     chunks = []
@@ -62,11 +62,11 @@ def load_features() -> pd.DataFrame:
 # Сохранение признаков в базу данных
 def save_features(features: pd.DataFrame):
     engine = create_engine(
-        "postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
-        "postgres.lab.karpov.courses:6432/startml"
+        "postgresql://robot-start*******"
+        "postgres.lab.karpov*********"
     )
     features.to_sql(
-        name='olg_semenova_lesson_22',
+        name='*****lesson_22',
         con=engine,
         if_exists='replace',
         index=False
