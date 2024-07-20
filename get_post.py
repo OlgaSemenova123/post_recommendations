@@ -55,7 +55,7 @@ def batch_load_sql(query: str) -> pd.DataFrame:
 
 
 def load_features() -> pd.DataFrame:
-    query = "SELECT * FROM olg_semenova_lesson_22"
+    query = "SELECT * FROM *****lesson_22"
     return batch_load_sql(query)
 
 
