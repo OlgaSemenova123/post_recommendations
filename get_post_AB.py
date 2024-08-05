@@ -49,7 +49,7 @@ def load_models(name: str):
 def batch_load_sql(query: str) -> pd.DataFrame:
     CHUNKSIZE = 50000
     engine = create_engine(
-        "postgresql://robot-startml-ro:pheiph0hahj1Vaif@"
+        "postgresql://robot-startml*********"
         "postgres.lab.karpov.courses:6432/startml"
     )
     conn = engine.connect().execution_options(stream_results=True)
@@ -61,12 +61,12 @@ def batch_load_sql(query: str) -> pd.DataFrame:
 
 
 def load_features_control() -> pd.DataFrame:
-    query = "SELECT * FROM olg_semenova_lesson_22"
+    query = "SELECT * FROM ****lesson_22"
     return batch_load_sql(query)
 
 
 def load_features_test() -> pd.DataFrame:
-    query = "SELECT * FROM olg_semenova_lesson_10"
+    query = "SELECT * FROM *****lesson_10"
     return batch_load_sql(query)
 
 
@@ -105,7 +105,7 @@ def get_recommendations_test(user_features):
 
 
 model_control = load_models("catboost_model")
-model_test = load_models("catboost_model (7)")
+model_test = load_models("dl_model")
 df_post = batch_load_sql('SELECT * FROM public.post_text_df')
 df_features_control = load_features_control()
 df_features_test = load_features_test()
